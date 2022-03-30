@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load custom_tag %}
+<head>
+    <meta charset="UTF-8">
+    <title>Evan's Blog</title>
+    <link rel="stylesheet" href="/static/assets/css/reset.css">
+    <link rel="stylesheet" href="/static/assets/css/index.css">
+    <script src="/static/vue/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <link rel="stylesheet" :href="'/static/assets/css/theme/' + theme +'.css'">
+    <nav>
+        <div class="left">
+            <a href="#">首页</a>
+            <a href="#">新闻</a>
+            <a href="#">文章</a>
+            <a href="#">关于</a>
+        </div>
+        <div class="right">
+            <img v-show="theme === 'light'" src="/static/assets/img/navi/light.svg" @click="setTheme('dark')" alt="Switch to light theme">
+            <img v-show="theme === 'dark'" src="/static/assets/img/navi/dark.svg" @click="setTheme('light')" alt="Switch to dark theme">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+        </div>
+    </nav>
+    <header>
+        {% for img in img_list %}
+            <div class="rotate_img">
+                <img src="{{ img }}" alt="">
+            </div>
+        {% endfor %}
+    </header>
+    <main>
+    主体内容
+        <div>
+            {{ 2|plus }}
+        </div>
+    </main>
+    <footer>
+    底部信息栏
+    </footer>
+</div>
+
+<script>
+    new Vue({
+        el: "#app",
+        delimiters: ["[[","]]"],
+        data: {
+            theme: "light"    //default theme
+        },
+        created() {
+            this.initTheme();
+        },
+        methods: {
+            // Initialize theme while uploading page
+            initTheme() {
+                let theme = localStorage.getItem("theme")
+                if(theme){
+                    this.theme = theme;
+                }
+            },
+
+            setTheme(themeName) {
+                // setup theme
+                this.theme = themeName;
+                // store current theme to localStorage
+                localStorage.setItem("theme", themeName);
+            }
+        }
+    })
+
+    let rotate_images = document.querySelectorAll(".rotate_img");
+    let rotate_images_length = rotate_images.length;
+    let rotate_index = 0;
+    let timer = null;
+
+    // Clear interval timer for every page loaded
+    clearInterval(timer);
+    // Rotate images
+    timer = setInterval(() =>{
+        //Reset opacity to 0 for each image every time
+        for (let i of rotate_images) {
+            i.style.opacity = 0;
+        }
+
+        if(rotate_index === rotate_images_length){
+            rotate_index = 0;
+        }
+
+        console.log(rotate_images_length)
+        console.log(rotate_index, rotate_images[rotate_index]);
+        rotate_images[rotate_index].style.opacity = 1;
+        rotate_index ++;
+    }, 3000)
+</script>
+</body>
+</html>
