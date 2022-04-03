@@ -39,7 +39,7 @@
   width: 100%;
   height: 750px;
 }
-#app header > div {
+#app header > .rotate_img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -47,10 +47,10 @@
   transition: all 1s;
   opacity: 0;
 }
-#app header > div:last-child {
+#app header > .rotate_img:last-child {
   opacity: 1;
 }
-#app header > div img {
+#app header > .rotate_img img {
   width: 100%;
 }
 #app main {

@@ -26,18 +26,9 @@
             <a href="#">注册</a>
         </div>
     </nav>
-    <header>
-        {% for img in img_list %}
-            <div class="rotate_img">
-                <img src="{{ img }}" alt="">
-            </div>
-        {% endfor %}
-    </header>
+    {% banner "index page" %}
     <main>
     主体内容
-        <div>
-            {{ 2|plus }}
-        </div>
     </main>
     <footer>
     底部信息栏
