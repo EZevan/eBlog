@@ -11,7 +11,7 @@ register = template.Library()
 
 
 @register.inclusion_tag("custom_tag/headers.html")
-def banner(name):
+def header_banner(name):
     """
     Use "inclusion_tag" to render a header template
     """

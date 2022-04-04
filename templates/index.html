@@ -20,25 +20,66 @@
             <a href="#">关于</a>
         </div>
         <div class="right">
-            <img v-show="theme === 'light'" src="/static/assets/img/navi/light.svg" @click="setTheme('dark')" alt="Switch to light theme">
-            <img v-show="theme === 'dark'" src="/static/assets/img/navi/dark.svg" @click="setTheme('light')" alt="Switch to dark theme">
+            <img v-show="theme === 'light'" src="/static/assets/img/navi/light.svg" @click="setTheme('dark')"
+                 alt="Switch to light theme">
+            <img v-show="theme === 'dark'" src="/static/assets/img/navi/dark.svg" @click="setTheme('light')"
+                 alt="Switch to dark theme">
             <a href="#">登录</a>
             <a href="#">注册</a>
         </div>
     </nav>
-    {% banner "index page" %}
+    {% header_banner "index page" %}
     <main>
-    主体内容
+        主体内容
     </main>
     <footer>
-    底部信息栏
+        <div>
+            <div class="contacts">
+                <div>
+                    <img class="svg" src="/static/assets/img/footer/wechat.svg" alt="Webchat">
+                    <img class="qrcode" src="/static/assets/img/footer/wechat_qrcode.png" alt="Wechat QRCode">
+                </div>
+                <div>
+                    <img class="svg" src="/static/assets/img/footer/qq.svg" alt="QQ">
+                    <img class="qrcode" src="/static/assets/img/footer/qq_qrcode.png" alt="QQ QRCode">
+                </div>
+                <div>
+                    <a href="https://space.bilibili.com/430114801" target="_blank">
+                        <img class="svg" src="/static/assets/img/footer/bilibili.svg" alt="Bilibili">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://blog.csdn.net/evanzhang_z" target="_blank">
+                        <img class="svg" src="/static/assets/img/footer/csdn.svg" alt="CSDN">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://github.com/EZevan" target="_blank">
+                        <img class="svg" src="/static/assets/img/footer/github.svg" alt="CSDN">
+                    </a>
+                </div>
+            </div>
+
+            <p class="copyright">
+                © 2022 EVANSBLOG.COM 版权所有.
+                <a href="https://beian.miit.gov.cn/">
+                    <img src="http://www.beian.gov.cn/img/new/gongan.png" alt="公安备案">沪ICP备09061941号-4
+                </a>
+            </p>
+            <p>建站日期: 2022-05-01</p>
+            <p class="version">
+                <span>version</span>
+                <span>1.0.0</span>
+            </p>
+
+        </div>
     </footer>
 </div>
 
 <script>
     new Vue({
         el: "#app",
-        delimiters: ["[[","]]"],
+        delimiters: ["[[", "]]"],
         data: {
             theme: "light"    //default theme
         },
@@ -49,7 +90,7 @@
             // Initialize theme while uploading page
             initTheme() {
                 let theme = localStorage.getItem("theme")
-                if(theme){
+                if (theme) {
                     this.theme = theme;
                 }
             },
@@ -71,20 +112,20 @@
     // Clear interval timer for every page loaded
     clearInterval(timer);
     // Rotate images
-    timer = setInterval(() =>{
+    timer = setInterval(() => {
         //Reset opacity to 0 for each image every time
         for (let i of rotate_images) {
             i.style.opacity = 0;
         }
 
-        if(rotate_index === rotate_images_length){
+        if (rotate_index === rotate_images_length) {
             rotate_index = 0;
         }
 
         console.log(rotate_images_length)
         console.log(rotate_index, rotate_images[rotate_index]);
         rotate_images[rotate_index].style.opacity = 1;
-        rotate_index ++;
+        rotate_index++;
     }, 3000)
 </script>
 </body>

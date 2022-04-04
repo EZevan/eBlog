@@ -22,7 +22,9 @@ class BaseModel(models.Model):
     create_by = models.CharField(max_length=15, verbose_name="creator name")
     update_time = models.DateTimeField(max_length=32, auto_now=True, verbose_name="update time")
     update_by = models.CharField(max_length=15, verbose_name="update by user")
-    is_deleted = models.BooleanField(max_length=10, verbose_name="the flag of deleted or not")
+    is_deleted = models.BooleanField(
+        max_length=10,
+        verbose_name="the flag of deleted or not; 0 means not deleted,1 means deleted")
 
     class Meta:
         # the abstract equals to True means that the base class won't be created database table by default
@@ -83,7 +85,7 @@ class UserInfo(AbstractUser, BaseModel):
     mobile = models.CharField(max_length=15, null=True, blank=True, verbose_name="mobile phone number")
     membership_points = models.IntegerField(default=0, verbose_name="membership points")
     token = models.UUIDField(default=uuid.uuid1().hex, null=True, blank=True, verbose_name="user token")
-    avatar_id = models.ForeignKey(
+    avatar = models.ForeignKey(
         to="Avatar",
         to_field="id",
         on_delete=models.SET_NULL,
@@ -112,7 +114,7 @@ class Avatar(BaseModel):
         verbose_name_plural = "User avatars"
 
 
-@receiver(pre_delete, sender=Avatar)    # sender = the class which you want to delete or modify file field belongs to
+@receiver(pre_delete, sender=Avatar)  # sender = the class which you want to delete or modify file field belongs to
 def on_delete_avatar(instance, **kwargs):
     """
     This function will delete corresponding file while deleting avatar
@@ -135,7 +137,7 @@ class Article(BaseModel):
     )
     status = models.IntegerField(choices=status_choice)
     is_recommendation = models.BooleanField(default=True, verbose_name="recommended or not")
-    cover_id = models.ForeignKey(
+    cover = models.ForeignKey(
         to="Cover",
         to_field="id",
         on_delete=models.SET_NULL,
@@ -173,13 +175,13 @@ class Comment(BaseModel):
     Article comments
     """
     likes_counts = models.IntegerField(default=0, verbose_name="the counts of likes for the comment")
-    article_id = models.ForeignKey(
+    article = models.ForeignKey(
         to="Article",
         to_field="id",
         on_delete=models.CASCADE,
         verbose_name="comment on the corresponding article"
     )
-    user_id = models.ForeignKey(
+    user = models.ForeignKey(
         to="UserInfo",
         to_field="id",
         on_delete=models.CASCADE,
@@ -207,6 +209,7 @@ class News(BaseModel):
     """
     the news from third-party website, such as sina news
     """
+
     class Meta:
         verbose_name_plural = "crawled news from third party"
 
@@ -253,7 +256,7 @@ class Navigation(BaseModel):
     """
     Website navigation
     """
-    nav_category_id = models.ForeignKey(
+    nav_category = models.ForeignKey(
         to="NavigationCategory",
         to_field="id",
         on_delete=models.CASCADE,
@@ -320,7 +323,8 @@ class Menu(BaseModel):
     menu_name = models.CharField(max_length=50, null=True, verbose_name="chinese menu name")
     menu_name_en = models.CharField(max_length=50, null=True, verbose_name="english menu name")
     slogan = models.CharField(max_length=50, null=True, verbose_name="website slogan")
-    slogan_abstract = models.CharField(max_length=100, null=True, help_text="delimit with semicolon for multiple slogan")
+    slogan_abstract = models.CharField(max_length=100, null=True,
+                                       help_text="delimit with semicolon for multiple slogan")
     is_rotate_slogan = models.BooleanField(default=False, verbose_name="rotating slogan abstract or not")
     background_img = models.ManyToManyField(
         to="MenuImg",
