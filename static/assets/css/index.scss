@@ -1,6 +1,29 @@
 // Windows安装scss(即sass)：1.安装Chocolatey；2.管理员权限运行cmd，choco install ruby；3.管理员权限运行cmd，ruby install sass；4.将ruby\bin\sass.bat添加到File Watchers的Scss程序路径中
 // Mac安装scss：1.安装node.js；2.npm install -D sass-loader；3.npm root找到包存放目录里对应的.../sass/sass.js,并将其添加到File Watchers的Scss程序路径中
 
+.card {
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 10px 20px;
+    border-bottom: 1px solid #edecd6;
+    border-radius: 5px 5px 0 0;
+    background-color: white;
+
+    > div {
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .body {
+    padding: 10px 20px 20px 20px;
+    border-radius: 0 0 5px 5px;
+    background-color: white;
+  }
+}
 
 #app {
   width: 100%;
@@ -51,6 +74,7 @@
     width: 100%;
     height: 780px;
 
+    // dynamic rotation image
     > .rotate_img {
       position: absolute;
       width: 100%;
@@ -71,12 +95,94 @@
   }
 
   main {
-    width: 100%;
+    width: calc(100% - 240px);
     min-height: 600px;
+    display: flex;
+    justify-content: center;
+    padding: 20px 120px;
     background: var(--main_bg);
     color: var(--main_color);
     font-family: Hei;
   }
+
+  .main {
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    justify-content: space-between;
+
+    > div > div {
+      margin-bottom: 15px;
+    }
+
+    .left {
+      width: 74%;
+    }
+
+    .right {
+      width: 25%;
+
+      .tags > .body {
+        position: relative;
+
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 10px;
+
+          // the keyframes to achieve animation effect
+          @keyframes move_block {
+            0% {
+              left: 0px;
+              top: 0px;
+            }
+            25% {
+              left: calc(100% - 20px);
+              top: 0px;
+            }
+            50% {
+              left: calc(100% - 20px);
+              top: calc(100% - 20px);
+            }
+            75% {
+              left: 0px;
+              top: calc(100% - 20px);
+            }
+            100% {
+              left: 0px;
+              top: 0px;
+            }
+          }
+
+          &::before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
+            width: 20px;
+            height: 20px;
+            content: "";
+            background-color: #ff9800;
+            -webkit-animation: move_block 5s infinite;  // adapt safari and chrome
+            animation:move_block 5s infinite; // setup animation name, animation duration and animation iteration count
+          }
+
+          li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 33.33%;
+            height: 40px;
+
+            &:nth-child(6n+1), &:nth-child(6n+2), &:nth-child(6n+3) {
+              background-color: #f4f4f4;
+            }
+          }
+        }
+      }
+    }
+  }
+
 
   footer {
     width: 100%;
@@ -144,11 +250,10 @@
           display: flex;
           align-items: center;
           padding-left: 15px;
-          //color: #bfbfbf;
 
-          &:hover {
-            color: #6f94c6;
-          }
+          //&:hover {
+          //  color: #6f94c6;
+          //}
 
           img {
             width: 15px;
