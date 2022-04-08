@@ -1,8 +1,25 @@
 # eBlog
 Personal blog project which developed by django and vue.js
 
-1. django 路由
-2. django 模板继承
-3. css @keyframes动画用法
-4. css &: 伪元素   
-5. css &~ 伪元素  - 选择同级
+1. python继承的三种用法
+2. uuid.uuid1, uuid4用法
+3. django model中 DatetimeField 的auto_now, auto_now_add 用法区别
+4. django model中 verbose_name，verbose_name_plural用法区别
+5. django MEDIA_ROOT 和 MEDIA_URL配置用法
+6. 正则表达式中的?P<name>命名组用法
+7. receiver装饰器用法
+8. django路由分发配置
+9. flex布局
+10. django中直接引入 vue.js
+11. django中使用 vue.js 语法，直接在 html 中无法使用{{variable}} 方式填充数据（替代方案：delimiters: ["[[","]]"])
+12. vue 冒号":"的作用 - 冒号即 v-bind，动态绑定；如\<a :href="..."> 等价于 \<a v-bind:href="..."> 
+13. vue 显示隐藏 v-show 和 v-if 的用法
+14. css 中&符号的作用 - sass 语法，标识嵌套的上一层
+15. css 中>符号的作用 - 子元素选择器，用法：> div{...}
+16. django 自定义过滤器
+17. django 模板标签（simple_tag; inclusion_tag）
+18. django 路由
+19. django 模板继承
+20. css @keyframes动画用法
+21. css &: 伪元素   
+22. css &~ 伪元素  - 选择同级
