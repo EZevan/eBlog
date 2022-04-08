@@ -24,6 +24,9 @@ from blogweb import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
+    path('news/', views.news),
+    path('article/', views.article),
+    path('about/', views.about)
 
     # media route config
     # re_path(r'media/(?P<path>.*)', serve, {'document_root': settings.MEDIA_ROOT}),

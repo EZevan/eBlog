@@ -7,6 +7,19 @@ a {
     color: #5a5a5a;
 }
 
+a:hover {
+    color: #3175e1;
+}
+
 p {
     margin: 4px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
 }
