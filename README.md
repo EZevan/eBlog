@@ -21,5 +21,47 @@ Personal blog project which developed by django and vue.js
 18. django 路由
 19. django 模板继承
 20. css @keyframes动画用法
-21. css &: 伪元素   
-22. css &~ 伪元素  - 选择同级
+21. css : 伪类
+    ```
+    :first-child，:link，:hover，:active,:focus，:nth-child
+    ```
+22. css :: 伪元素
+    ```
+    :first-line，:first-letter，:before，:after
+    ```
+23. css [] 属性选择器
+       ```
+       span[class='test']    匹配所有带有class类名test的span标签
+       span[class *='test']  匹配所有包含了test字符串的class类名的span标签
+       span[active]          匹配所有带有active属性的span标签
+       [class='all']         匹配页面上所有带有class='all'的标签
+       [class *='as']        匹配页面上所有class类且类名带有as字符串的类的标签
+       ```
+24. css ’~‘ 子代选择器
+       ```css
+       div ~ ul    表示选择 div 后的所有ul标签，不管多少层级
+       ```
+25. css ’>‘ 子代选择器
+       ```css
+       div > ul    表示选择该 div 标签内紧跟着的所有的ul标签
+       ```
+26. css ’+‘ 相邻兄弟选择器（）
+       ```css
+       div + ul    表示选择紧接在 div 标签后出现的ul标签，且div和ul拥有相同的父元素
+       ```
+27. 单行文本截断
+       ```
+       overflow: hidden;
+       white-space: nowrap;
+       text-overflow: ellipsis;
+       ```
+28. 多行文本截断
+       ```
+       display: -webkit-box;
+       -webkit-box-orient: vertical;
+       -webkit-line-clamp: 4;
+       overflow: hidden;
+       text-overflow: ellipsis;
+       ```
+
+

@@ -22,6 +22,7 @@
     padding: 10px 20px 20px 20px;
     border-radius: 0 0 5px 5px;
     background-color: white;
+    font-size: 14px;
   }
 }
 
@@ -117,10 +118,122 @@
 
     .left {
       width: 74%;
+
+      .all_articles > .body {
+        background-color: transparent;
+        padding: 0;
+
+        > ul {
+          width: 100%;
+
+          > li {
+            width: 100%;
+            display: flex;
+            background-color: white;
+            margin-bottom: 20px;
+            border-radius: 5px;
+
+            &:first-child {
+              border-radius: 0 0 5px 5px;
+            }
+
+            .left {
+              width: 30%;
+              box-sizing: border-box;
+              padding: 20px 20px 20px 20px;
+
+              // img标签外包一层div，以实现img hover放大的时候在固定的尺寸内
+              > div {
+                width: 100%;
+                height: 185px;
+                overflow: hidden;
+                border-radius: 3px;
+              }
+
+              img {
+                width: 100%;
+
+                &:hover {
+                  transform: scale(1.1);
+                  transition: all 0.3s;
+                }
+              }
+            }
+
+            .right {
+              width: 70%;
+              box-sizing: border-box;
+              padding: 20px 20px 20px 20px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+
+              > h2 {
+                font-size: 22px;
+              }
+
+              p {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 4;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 16px;
+              }
+
+              .extra_info {
+                color: #777;
+
+                > span {
+                  margin-right: 10px;
+
+                  > i {
+                    margin-right: 5px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
 
     .right {
       width: 25%;
+
+      .recommendation > .body {
+        ul {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          padding-top: 10px;
+
+          li {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 15px;
+            &:last-child{
+              margin-bottom: 0;
+            }
+
+            > a {
+              padding-right: 20px;
+            }
+
+            > span {
+              color: #777;
+              font-size: 12px;
+              min-width: 70px;
+
+              i {
+                padding-right: 5px;
+              }
+            }
+          }
+        }
+      }
 
       .tags > .body {
         position: relative;
@@ -163,8 +276,8 @@
             height: 20px;
             content: "";
             background-color: #ff9800;
-            -webkit-animation: move_block 5s infinite;  // adapt safari and chrome
-            animation:move_block 5s infinite; // setup animation name, animation duration and animation iteration count
+            -webkit-animation: move_block 5s infinite; // adapt safari and chrome
+            animation: move_block 5s infinite; // setup animation name, animation duration and animation iteration count
           }
 
           li {
