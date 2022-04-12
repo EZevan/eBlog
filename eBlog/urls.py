@@ -24,6 +24,8 @@ from blogweb import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
+    path('login/', views.login),
+    path('register/', views.register),
     path('news/', views.news),
     path('article/', views.article),
     path('about/', views.about)

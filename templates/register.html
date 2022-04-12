@@ -1,0 +1,35 @@
+{% extends "login.html" %}
+
+{% block title %}
+    <title>Evan's Blog | Sign up</title>
+{% endblock %}
+
+{% block login_info %}
+    <h2>注册</h2>
+    <div class="login_info">
+        <input type="text" placeholder="请输入用户名">
+        <input type="text" placeholder="请输入密码">
+        <input type="text" placeholder="请确认密码">
+        <button>注册</button>
+    </div>
+{% endblock %}
+
+{% block other_login %}
+    <div class="other_login">
+        <p>其他登录方式</p>
+        <div>
+            <img src="/static/assets/img/footer/wechat.svg" alt="">
+            <img src="/static/assets/img/footer/github.svg" alt="">
+        </div>
+    </div>
+{% endblock %}
+
+{% block register %}
+    <div class="register">
+        <p>已有账号？</p>
+        <div>
+            <a href="/login">去登录</a>
+            <a href="/">去首页</a>
+        </div>
+    </div>
+{% endblock %}
