@@ -38,30 +38,39 @@ Personal blog project which developed by django and vue.js
        [class *='as']        匹配页面上所有class类且类名带有as字符串的类的标签
        ```
 24. css ’~‘ 子代选择器
-       ```css
-       div ~ ul    表示选择 div 后的所有ul标签，不管多少层级
-       ```
+    ```css
+    div ~ ul    表示选择 div 后的所有ul标签，不管多少层级
+    ```
 25. css ’>‘ 子代选择器
-       ```css
-       div > ul    表示选择该 div 标签内紧跟着的所有的ul标签
-       ```
+    ```css
+    div > ul    表示选择该 div 标签内紧跟着的所有的ul标签
+    ```
 26. css ’+‘ 相邻兄弟选择器（）
-       ```css
-       div + ul    表示选择紧接在 div 标签后出现的ul标签，且div和ul拥有相同的父元素
-       ```
+     ```css
+     div + ul    表示选择紧接在 div 标签后出现的ul标签，且div和ul拥有相同的父元素
+     ```
 27. 单行文本截断
-       ```
-       overflow: hidden;
-       white-space: nowrap;
-       text-overflow: ellipsis;
-       ```
+    ```
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    ```
 28. 多行文本截断
-       ```
-       display: -webkit-box;
-       -webkit-box-orient: vertical;
-       -webkit-line-clamp: 4;
-       overflow: hidden;
-       text-overflow: ellipsis;
-       ```
-
+    ```
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    ```    
+29. axios 进行接口请求
+    ```
+    <script></script>
+    ```
+30. django 中间件  
+    ```
+    from django.utils.deprecation import middlemareMixin
+    ```
+31. axios 中间件
+32. 浏览器CSRF攻击
 
