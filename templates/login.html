@@ -1,77 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    {% block title %}
-        <title>Evan's Blog · Sign in</title>
-    {% endblock %}
+  <meta charset="UTF-8">
+  {% block title %}
+  <title>Evan's Blog · Sign in</title>
+  {% endblock %}
 
-    <link rel="stylesheet" href="/static/assets/css/reset.css">
-    <link rel="stylesheet" href="/static/assets/css/login.css">
+  <link rel="stylesheet" href="/static/assets/css/reset.css">
+  <link rel="stylesheet" href="/static/assets/css/login.css">
 
 </head>
 <body>
 <div id="app">
-    <main>
-        <div class="left">
-            <img src="/static/assets/img/login/login_illustration_blue.svg" alt="">
-        </div>
-        <div class="right">
-            {% block login_info %}
-                <h2>登录</h2>
-                <div class="login_info">
-                    <input type="text" v-model="login_form.username" placeholder="请输入用户名">
-                    <input type="text" v-model="login_form.password" placeholder="请输入密码">
-                    <button @click="login">登录</button>
-                </div>
-            {% endblock %}
+  <main>
+    <div class="left">
+      <img src="/static/assets/img/login/login_illustration_blue.svg" alt="">
+    </div>
+    <div class="right">
+      {% block login_info %}
+      <h2>登录</h2>
+      <div class="login_info">
+        {% csrf_token %}
+        <input type="text" v-model="login_form.username" placeholder="请输入用户名">
+        <input type="text" v-model="login_form.password" placeholder="请输入密码">
+        <button @click="login">登录</button>
+      </div>
+      {% endblock %}
 
-            {% block other_login %}
-                <div class="other_login">
-                    <p>其他登录方式</p>
-                    <div>
-                        <img src="/static/assets/img/footer/wechat.svg" alt="">
-                        <img src="/static/assets/img/footer/github.svg" alt="">
-                    </div>
-                </div>
-            {% endblock %}
-
-            {% block register %}
-                <div class="register">
-                    <p>没有账号？</p>
-                    <div>
-                        <a href="/register">去注册</a>
-                        <a href="/">去首页</a>
-                    </div>
-                </div>
-            {% endblock %}
+      {% block other_login %}
+      <div class="other_login">
+        <p>其他登录方式</p>
+        <div>
+          <img src="/static/assets/img/footer/wechat.svg" alt="">
+          <img src="/static/assets/img/footer/github.svg" alt="">
         </div>
-    </main>
+      </div>
+      {% endblock %}
+
+      {% block register %}
+      <div class="register">
+        <p>没有账号？</p>
+        <div>
+          <a href="/register">去注册</a>
+          <a href="/">去首页</a>
+        </div>
+      </div>
+      {% endblock %}
+    </div>
+  </main>
 </div>
 
 <script src="/static/axios/axios.min.js"></script>
 <script src="/static/vue/vue.js"></script>
-<script>;
+<script>
 
-    new Vue({
-        el: "#app",
-        data: {
-            login_form: {
-                username: "",
-                password: ""
-            }
-        },
-        methods:{
-            login(){
-                axios.post("/login/", this.login_form).then(res =>{
-                  console.log(res)
-                })
-            }
-        }
-    })
+  // axios 请求中间件
+  axios.interceptors.request.use(request => {
+    if (request.method === "post") {
+      let csrf_token = document.querySelector('input[name="csrfmiddlewaretoken"]').value
+      request.headers["X-CSRFToken"] = csrf_token
+    }
+    return request
+  })
+
+  // axios 响应中间件
+  axios.interceptors.response.use(response => {
+    return response.data
+  })
+
+  new Vue({
+    el: "#app",
+    data: {
+      login_form: {
+        username: "",
+        password: ""
+      }
+    },
+    methods: {
+      login() {
+        axios.post("/login/", this.login_form).then(res => {
+          console.log(res.username)
+        })
+      }
+    }
+  })
 </script>
-
-
 </body>
 </html>
 

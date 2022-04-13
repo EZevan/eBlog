@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import JsonResponse
 
 
 # Create your views here.
@@ -19,6 +20,9 @@ def about(request):
 
 
 def login(request):
+    if request.method == "POST":
+        data = request.data
+        return JsonResponse(data)
     return render(request, "login.html")
 
 

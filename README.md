@@ -73,4 +73,5 @@ Personal blog project which developed by django and vue.js
     ```
 31. axios 中间件
 32. 浏览器CSRF攻击
+33. django CSRF 拦截，配合使用在对应前端页面添加{% csrf_token %}
 
