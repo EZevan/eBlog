@@ -2,19 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f954114-1827-4ca5-ac94-c172dba501cf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/eBlog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/eBlog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blogweb/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogweb/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eBlog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/eBlog/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/index.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eBlog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/eBlog/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/assets/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/assets/css/login.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/login.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/axios/axios.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vue/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/vue/vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/login.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vue/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/vue/vue.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +26,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -47,11 +45,38 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/assets/font" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/assets/font" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Django Server.eBlog">
+    <configuration name="gen_captcha" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="eBlog" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/blogweb/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/blogweb/utils/gen_captcha.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="eBlog" type="Python.DjangoServer" factoryName="Django server">
       <module name="eBlog" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -76,6 +101,11 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.gen_captcha" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -87,11 +117,33 @@
       <updated>1649815573784</updated>
       <workItem from="1649815577758" duration="365000" />
       <workItem from="1649816058139" duration="587000" />
-      <workItem from="1649817175677" duration="5574000" />
+      <workItem from="1649817175677" duration="5684000" />
+      <workItem from="1650097690262" duration="365000" />
+      <workItem from="1650098447726" duration="125000" />
+      <workItem from="1650098577889" duration="6000" />
+      <workItem from="1650098604976" duration="563000" />
+      <workItem from="1650099213863" duration="273000" />
+      <workItem from="1650099507198" duration="6366000" />
+      <workItem from="1650120483689" duration="7308000" />
+      <workItem from="1650128930144" duration="1135000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/eBlog$gen_captcha.coverage" NAME="gen_captcha Coverage Results" MODIFIED="1650126201229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/blogweb/utils" />
   </component>
 </project>

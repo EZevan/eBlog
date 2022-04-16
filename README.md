@@ -1,5 +1,5 @@
 # eBlog
-Personal blog project which developed by django and vue.js
+Personal blog project which developed by django and vue.min.js
 
 1. python继承的三种用法
 2. uuid.uuid1, uuid4用法
@@ -10,8 +10,8 @@ Personal blog project which developed by django and vue.js
 7. receiver装饰器用法
 8. django路由分发配置
 9. flex布局
-10. django中直接引入 vue.js
-11. django中使用 vue.js 语法，直接在 html 中无法使用{{variable}} 方式填充数据（替代方案：delimiters: ["[[","]]"])
+10. django中直接引入 vue.min.js
+11. django中使用 vue.min.js 语法，直接在 html 中无法使用{{variable}} 方式填充数据（替代方案：delimiters: ["[[","]]"])
 12. vue 冒号":"的作用 - 冒号即 v-bind，动态绑定；如\<a :href="..."> 等价于 \<a v-bind:href="..."> 
 13. vue 显示隐藏 v-show 和 v-if 的用法
 14. css 中&符号的作用 - sass 语法，标识嵌套的上一层
@@ -74,4 +74,6 @@ Personal blog project which developed by django and vue.js
 31. axios 中间件
 32. 浏览器CSRF攻击
 33. django CSRF 拦截，配合使用在对应前端页面添加{% csrf_token %}
+34. django JsonResponse
+35. django JsonResponse
 
