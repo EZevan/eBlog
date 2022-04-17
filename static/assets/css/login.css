@@ -77,11 +77,10 @@ body main .right .login_info input:focus {
   border: 1px solid #4f81f5;
 }
 body main .right .login_info img {
-  width: 175px;
-  height: 40px;
+  width: 45%;
   position: absolute;
   right: 2px;
-  bottom: 74px;
+  bottom: 77px;
   cursor: pointer;
 }
 body main .right .login_info > button {

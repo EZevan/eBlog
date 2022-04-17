@@ -13,11 +13,11 @@ def random_color():
     return color
 
 
-def gen_captcha(char_size=24, char_num=4, point_num=80, line_num=10):
+def gen_captcha(char_size=16, char_num=4, point_num=50, line_num=5):
     """
     Generate random captcha
     """
-    width, height = 180, 30
+    width, height = 100, 20
     char_pool = string.digits + string.ascii_letters
 
     # Instantiate an image object
@@ -27,7 +27,7 @@ def gen_captcha(char_size=24, char_num=4, point_num=80, line_num=10):
     draw = ImageDraw.Draw(image)
 
     # Claim a font with specified font file and font size
-    font = ImageFont.truetype(font="static/assets/font/Phat_Grunge.ttf", size=char_size)
+    font = ImageFont.truetype(font="static/assets/font/lovie.ttf", size=char_size)
 
     captcha = str()
 
