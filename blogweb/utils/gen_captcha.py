@@ -27,7 +27,7 @@ def gen_captcha(char_size=24, char_num=4, point_num=80, line_num=10):
     draw = ImageDraw.Draw(image)
 
     # Claim a font with specified font file and font size
-    font = ImageFont.truetype(font="static/assets/font/Menlo.ttc", size=char_size)
+    font = ImageFont.truetype(font="static/assets/font/Phat_Grunge.ttf", size=char_size)
 
     captcha = str()
 

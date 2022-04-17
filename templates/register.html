@@ -6,22 +6,24 @@
 
 {% block login_info %}
     <h2>注册</h2>
-    <div class="login_info">
+    <div class="login_info register_form">
         <input type="text" placeholder="请输入用户名">
         <input type="text" placeholder="请输入密码">
         <input type="text" placeholder="请确认密码">
+        <input type="text" v-model="login_form.captcha" placeholder="请输入验证码">
+        <img src="/login/captcha/" alt="">
         <button>注册</button>
     </div>
 {% endblock %}
 
 {% block other_login %}
-    <div class="other_login">
-        <p>其他登录方式</p>
-        <div>
-            <img src="/static/assets/img/footer/wechat.svg" alt="">
-            <img src="/static/assets/img/footer/github.svg" alt="">
-        </div>
-    </div>
+<!--    <div class="other_login">-->
+<!--        <p>其他登录方式</p>-->
+<!--        <div>-->
+<!--            <img src="/static/assets/img/footer/wechat.svg" alt="">-->
+<!--            <img src="/static/assets/img/footer/github.svg" alt="">-->
+<!--        </div>-->
+<!--    </div>-->
 {% endblock %}
 
 {% block register %}

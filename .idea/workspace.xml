@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f954114-1827-4ca5-ac94-c172dba501cf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/eBlog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/eBlog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blogweb/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogweb/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eBlog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/eBlog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogweb/utils/gen_captcha.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogweb/utils/gen_captcha.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/assets/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/assets/css/login.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/login.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/assets/css/login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/login.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vue/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/vue/vue.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/font/Menlo.ttc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/font/cat.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/font/wild_kid.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +123,7 @@
       <workItem from="1650099213863" duration="273000" />
       <workItem from="1650099507198" duration="6366000" />
       <workItem from="1650120483689" duration="7308000" />
-      <workItem from="1650128930144" duration="1135000" />
+      <workItem from="1650128930144" duration="3998000" />
     </task>
     <servers />
   </component>

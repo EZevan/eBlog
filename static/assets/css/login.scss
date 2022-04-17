@@ -90,7 +90,7 @@ body {
           height: 40px;
           position: absolute;
           right: 2px;
-          top: 137px;
+          bottom: 73px;
           cursor: pointer;
         }
 
@@ -102,6 +102,10 @@ body {
           border-radius: 5px;
           cursor: pointer;
         }
+      }
+
+      .register_form {
+        height: 61.8%;
       }
 
       .other_login {
