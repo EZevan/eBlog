@@ -20,7 +20,6 @@ from django.views.static import serve
 
 from blogweb import views
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),

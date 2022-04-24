@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" href="/static/assets/css/reset.css">
   <link rel="stylesheet" href="/static/assets/css/login.css">
+  <link rel="stylesheet" href="/static/element-ui/index.css">
 
 </head>
 <body>
@@ -21,9 +22,9 @@
       <h2>登录</h2>
       <div class="login_info">
         {% csrf_token %}
-        <input type="text" v-model="login_form.username" placeholder="请输入用户名">
-        <input type="text" v-model="login_form.password" placeholder="请输入密码">
-        <input type="text" v-model="login_form.captcha" placeholder="请输入验证码">
+        <input type="text" ref="login_info_username" v-model="login_form.username" placeholder="请输入用户名">
+        <input type="text" ref="login_info_password" v-model="login_form.password" placeholder="请输入密码">
+        <input type="text" ref="login_info_captcha" v-model="login_form.captcha" placeholder="请输入验证码">
         <img src="/login/captcha/" alt="">
         <button @click="login">登录</button>
       </div>
@@ -54,6 +55,7 @@
 
 <script src="/static/axios/axios.min.js"></script>
 <script src="/static/vue/vue.min.js"></script>
+<script src="/static/element-ui/index.js"></script>
 <script>
 
   // axios 请求中间件
@@ -82,7 +84,11 @@
     methods: {
       login() {
         axios.post("/login/", this.login_form).then(res => {
-          console.log(res.username)
+          console.log(res)
+          if(res.code !== 0){
+            this.$message.error(res.msg)
+            this.$refs[`login_info_${res.arguments}`].focus()
+          }
         })
       }
     }

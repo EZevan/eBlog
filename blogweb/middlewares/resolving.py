@@ -13,4 +13,11 @@ class ResolvingMiddleware(MiddlewareMixin):
             request.data = data
 
     def prcess_response(self, response):
+        # Construct response object
+        res = {
+            "data",
+            "errors",
+            "success"
+        }
+
         return response

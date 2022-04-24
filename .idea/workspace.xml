@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3f954114-1827-4ca5-ac94-c172dba501cf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/eBlog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/eBlog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blogweb/utils/gen_captcha.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogweb/utils/gen_captcha.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/login.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/login.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/login.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/font/covid-infected.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogweb/middlewares/resolving.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogweb/middlewares/resolving.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogweb/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogweb/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eBlog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/eBlog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,10 +32,28 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/static/assets/css/index.scss" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/static/assets/css/theme/dark.css" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/static/assets/css/theme/light.css" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/templates/index.html" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/static/assets/css/reset.css" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="27iv9lcNpTWa6jXFwfZlKW2OEcC" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -40,13 +62,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/assets/font" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/elementui" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\python\eBlog\static\elementui" />
       <recent name="$PROJECT_DIR$/static/assets/font" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\projects\python\eBlog\static\element-ui\fonts" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.eBlog">
@@ -80,7 +110,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="eBlog.settings" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\projects\python\eBlog\env\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -96,6 +126,10 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Django Server.eBlog" />
+      <item itemvalue="Python.gen_captcha" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.gen_captcha" />
@@ -121,6 +155,7 @@
       <workItem from="1650099507198" duration="6366000" />
       <workItem from="1650120483689" duration="7308000" />
       <workItem from="1650128930144" duration="5847000" />
+      <workItem from="1650761200151" duration="6716000" />
     </task>
     <servers />
   </component>
