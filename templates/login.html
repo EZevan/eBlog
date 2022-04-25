@@ -25,7 +25,7 @@
         <input type="text" ref="login_info_username" v-model="login_form.username" placeholder="请输入用户名">
         <input type="text" ref="login_info_password" v-model="login_form.password" placeholder="请输入密码">
         <input type="text" ref="login_info_captcha" v-model="login_form.captcha" placeholder="请输入验证码">
-        <img src="/login/captcha/" alt="">
+        <img src="/login/captcha/" @click="refresh_captcha" alt="">
         <button @click="login">登录</button>
       </div>
       {% endblock %}
@@ -89,6 +89,15 @@
             this.$message.error(res.msg)
             this.$refs[`login_info_${res.arguments}`].focus()
           }
+          else{
+            this.$message.success(res.msg)
+          }
+
+        })
+      },
+      refresh_captcha(){
+        axios.get("/login/captcha/").then(res =>{
+          console.log()
         })
       }
     }
